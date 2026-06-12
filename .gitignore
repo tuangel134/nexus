@@ -1,0 +1,39 @@
+# ─── Datos de investigación ──────────────────────────────────────────────────
+nexus.db
+nexus.db.enc
+uploads/*
+!uploads/.gitkeep
+.nexus_salt
+.nexus_key
+backups/
+profiles_data/
+script investigacion/profiles_data/
+script investigacion/venv/
+script investigacion/__pycache__/
+script investigacion/config.json
+script investigacion/*.db
+
+# ─── Node / Frontend ─────────────────────────────────────────────────────────
+nexus-frontend/app/node_modules/
+nexus-frontend/app/dist/
+
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.venv/
+
+# ─── OS ──────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ─── Builds ──────────────────────────────────────────────────────────────────
+dist/
+build/
+*.spec
+*.exe
+*.deb

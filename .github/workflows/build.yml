@@ -1,0 +1,111 @@
+name: Build NEXUS
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install flask cryptography qrcode[pil] pyinstaller
+
+      - name: Build frontend
+        run: |
+          cd nexus-frontend/app
+          npm install
+          npm run build
+        shell: bash
+
+      - name: Build .exe
+        run: |
+          pyinstaller --onefile --name nexus --add-data "nexus-frontend/app/dist;frontend" --add-data "uploads;uploads" --add-data "backups;backups" app.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nexus-windows
+          path: dist/nexus.exe
+
+  build-debian:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install flask cryptography qrcode[pil]
+
+      - name: Build frontend
+        run: |
+          cd nexus-frontend/app
+          npm install
+          npm run build
+
+      - name: Build .deb package
+        run: |
+          mkdir -p pkg/DEBIAN
+          mkdir -p pkg/usr/share/nexus
+          mkdir -p pkg/usr/bin
+
+          cat > pkg/DEBIAN/control << 'EOF'
+          Package: nexus
+          Version: 1.0.0
+          Section: utils
+          Priority: optional
+          Architecture: all
+          Maintainer: https://github.com/tuusuario/nexus
+          Description: NEXUS - Intelligence Investigation Platform
+           OSINT suite with case management, visual board, AI analysis.
+          Depends: python3, python3-flask, python3-pip
+          EOF
+
+          # Copy files
+          cp -r app.py crypto.py nexus.sh pkg/usr/share/nexus/
+          cp -r nexus-frontend/app/dist pkg/usr/share/nexus/frontend
+          cp -r uploads backups pkg/usr/share/nexus/ 2>/dev/null || true
+
+          # Create launcher
+          cat > pkg/usr/bin/nexus << 'LAUNCHER'
+          #!/bin/bash
+          cd /usr/share/nexus && python3 app.py "$@"
+          LAUNCHER
+          chmod +x pkg/usr/bin/nexus
+
+          dpkg-deb --build pkg
+          mv pkg.deb nexus-${{ github.ref_name }}.deb
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nexus-debian
+          path: nexus-*.deb
+
+  release:
+    needs: [build-windows, build-debian]
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - uses: actions/download-artifact@v4
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            nexus-windows/nexus.exe
+            nexus-debian/nexus-*.deb

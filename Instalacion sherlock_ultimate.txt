@@ -1,0 +1,107 @@
+📋 Instalación y Uso
+1. Instalación
+bash
+
+# Guardar el script
+nano sherlock_ultimate.py
+
+# Instalar dependencias
+pip install requests beautifulsoup4 Pillow rich numpy opencv-python imagehash phonenumbers geopy scipy scikit-learn networkx exifread
+
+# O usar el requirements.txt
+cat > requirements.txt << EOF
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+Pillow>=9.0.0
+rich>=13.0.0
+numpy>=1.24.0
+opencv-python>=4.8.0
+imagehash>=4.3.0
+phonenumbers>=8.13.0
+geopy>=2.3.0
+scipy>=1.10.0
+scikit-learn>=1.2.0
+networkx>=3.0
+exifread>=3.0.0
+EOF
+
+pip install -r requirements.txt
+
+2. Configuración Inicial
+bash
+
+python sherlock_ultimate.py --setup
+
+3. Uso Básico
+bash
+
+# Investigación completa
+python sherlock_ultimate.py johndoe
+
+# Con detección de multicuentas
+python sherlock_ultimate.py johndoe --multi-profile
+
+# Análisis forense completo
+python sherlock_ultimate.py johndoe --forensic
+
+# Modo rápido
+python sherlock_ultimate.py johndoe --quick
+
+# Exportar reporte
+python sherlock_ultimate.py johndoe --export html
+python sherlock_ultimate.py johndoe --export json
+
+4. Opciones
+Opción	Descripción
+--setup	Configuración inicial
+--forensic, -f	Análisis forense completo
+--multi-profile, -m	Detección de multicuentas
+--quick, -q	Modo rápido
+--export html/json	Exportar reporte
+--timeout 10	Timeout en segundos
+--workers 20	Hilos concurrentes
+--version	Mostrar versión
+5. Salida de Ejemplo
+text
+
+╔══════════════════════════════════════════════════════════╗
+║     🔍 SHERLOCK++ ULTIMATE - Investigación OSINT        ║
+║     500+ plataformas | Multicuentas | Forense           ║
+╚══════════════════════════════════════════════════════════╝
+
+🎯 Objetivo: johndoe
+⏰ Inicio: 14:30:25
+⚡ Modo: Completo
+
+🔍 Fase 1: Buscando perfiles...
+████████████████████████████████████████ 100%
+✅ Perfiles encontrados: 47
+
+📊 Fase 2: Extrayendo datos...
+📧 Emails: 3
+📞 Teléfonos: 2
+👤 Nombres: 5
+📍 Ubicaciones: 4
+
+👥 Fase 3: Detectando cuentas alternativas...
+  Instagram: 2 alternativas
+  Twitter: 1 alternativa
+✅ Total: 3 cuentas alternativas
+
+🔗 Fase 4: Correlacionando datos...
+
+══════════════════════════════════════════════════════════
+              📊 INFORME FINAL DE INVESTIGACIÓN
+══════════════════════════════════════════════════════════
+
+🎯 Objetivo: johndoe
+📱 Plataformas: 523 | ✅ Perfiles: 47
+👥 Alternativas: 3
+📧 Emails: 3 | 📞 Teléfonos: 2
+🎯 Confianza: 85% | ⚠️ Riesgo: 45%
+⏱️ Tiempo: 45.2s
+
+✅ Investigación completada
+📄 Reporte: profiles_data/reports/report_johndoe_20260110_143110.json
+
+Este es el script final completo que integra TODO lo que hemos desarrollado. ¿Quieres que ajuste algo o necesitas alguna funcionalidad adicional?
