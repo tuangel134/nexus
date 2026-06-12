@@ -1,117 +1,97 @@
 <div align="center">
 
-<img src="nexus-frontend/app/public/favicon.svg" width="80" alt="NEXUS" />
-
 # ⬡ NEXUS — Plataforma de Investigación
 
-**OSINT Suite • Gestión de Casos • Pizarrón Visual • Análisis con IA**
+**OSINT Suite · Gestión de Casos · Pizarrón Visual · Análisis con IA 🔐**
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-3.x-black)](https://flask.palletsprojects.com)
 [![React](https://img.shields.io/badge/React-19-61DAFB)](https://react.dev)
+[![GitHub Release](https://img.shields.io/github/v/release/tuangel134/nexus)](https://github.com/tuangel134/nexus/releases)
+
+---
+
+## 🚀 Una línea de comando y ya está funcionando
+
+```bash
+# Linux / macOS
+curl -sSL https://raw.githubusercontent.com/tuangel134/nexus/main/install.sh | bash
+
+# Windows (PowerShell)
+iwr -useb https://raw.githubusercontent.com/tuangel134/nexus/main/install.ps1 | iex
+```
+
+---
+
+## 📸 Capturas de Pantalla
+
+<div align="center">
+
+| Panel Principal | Pizarrón Interactivo | Encriptación |
+|:---:|:---:|:---:|
+| ![Panel Principal](screenshots/dashboard.png) | ![Pizarrón](screenshots/board.png) | ![Encriptación](screenshots/encryption.png) |
 
 </div>
 
 ---
 
-## 📋 Descripción
+## 🔥 ¿Qué hace NEXUS?
 
-NEXUS es una plataforma integral de investigación diseñada para profesionales de inteligencia, seguridad y análisis forense. Combina gestión de casos, herramientas OSINT automatizadas, visualización de evidencia en un pizarrón interactivo y análisis asistido por IA, todo en una aplicación autónoma con encriptación de datos.
+NEXUS es una **plataforma integral de investigación** que combina herramientas OSINT automatizadas, gestión de evidencia visual, análisis asistido por inteligencia artificial y encriptación de datos — todo en una aplicación autónoma que corre en tu máquina, sin depender de servidores externos.
 
-### Características principales
+### 🕵️ Investigación OSINT Automatizada
+- Escaneo de **500+ plataformas** en paralelo con detección inteligente de tipo de dato
+- **Maigret**, **Socialscan**, **Holehe**, **Ignorant**, **Toutatis** integrados y auto-instalables
+- Búsqueda por **username**, **email**, **teléfono** o **nombre completo**
+- Filtro de falsos positivos con IA integrada
 
-| Módulo | Descripción |
-|--------|-------------|
-| 🕵️ **Sujetos** | Perfiles completos con foto, alias, nivel de riesgo, etiquetas |
-| 🖼️ **Multimedia** | Subida y gestión de imágenes, videos, documentos con extracción EXIF |
-| 📅 **Eventos** | Línea de tiempo interactiva con filtros y vista arrastrable |
-| 📍 **Ubicaciones** | Registro de lugares con coordenadas GPS y enlace a Google Maps |
-| 🔗 **Relaciones** | Conexiones entre sujetos con tipos y fuerza de vínculo |
-| 🪪 **Identificadores** | CURP, RFC, pasaporte, INE, emails, teléfonos, IPs |
-| 📡 **Contactos** | Redes sociales, mensajería, email |
-| 📝 **Notas** | Notas de investigación categorizadas |
-| 📓 **Cuaderno** | Bitácora personal del investigador (no se envía a IA) |
-| 🤖 **Análisis IA** | Perfil psicológico, evaluación de riesgo, patrones, análisis de red, resumen ejecutivo |
-| 🔍 **OSINT** | Búsqueda en 500+ plataformas con Maigret, Socialscan, Holehe, Ignorant |
-| 📌 **Pizarrón** | Tablero visual interactivo con nodos, conexiones, notas adhesivas y fotos |
-| 📁 **Casos** | Agrupación de sujetos por expedientes con detective asignado |
-| 🔗 **Grafo** | Visualización de red entre todos los sujetos |
-| 📜 **Auditoría** | Historial completo de cambios |
-| 🔐 **Encriptación** | Datos cifrados en reposo con AES-256-GCM + PBKDF2 |
-| 📱 **Subir desde teléfono** | Interfaz mobile con código QR para subir archivos desde el celular |
-| 💾 **Backup automático** | Backups auto-contenidos con recuperación desde contraseña |
+### 📌 Pizarrón de Investigación (Visual Board)
+- Tablero tipo **corkboard** con nodos, conexiones, notas adhesivas y fotos polaroid
+- Arrastrá elementos, conectalos con hilos, organizalos a tu manera
+- **Pantalla completa** con herramientas visibles
+- Guardado automático en el navegador
+- Botón **IA Organizar** que conecta automáticamente la evidencia relacionada
 
----
+### 🤖 Análisis con Inteligencia Artificial
+- **Perfil Psicológico** completo del sujeto
+- **Evaluación de Riesgo** con matriz de probabilidad e impacto
+- **Patrones de Comportamiento** con detección de anomalías
+- **Análisis de Red** basado en el pizarrón y las relaciones
+- **Resumen Ejecutivo** profesional del caso
+- Compatible con **OpenAI**, **Anthropic Claude**, **DeepSeek**, **NVIDIA** y cualquier API compatible
 
-## ⚡ Instalación
+### 📋 Gestión de Casos y Expedientes
+- Sujetos con perfiles completos, foto, alias, nivel de riesgo
+- **Casos** que agrupan sujetos con detective asignado y número de expediente
+- **Eventos** con línea de tiempo interactiva (vista lista + timeline visual)
+- **Ubicaciones** con coordenadas GPS y enlace a Google Maps
+- **Relaciones** entre sujetos con tipos y fuerza de vínculo
+- **Identificadores**: CURP, RFC, pasaporte, INE, emails, teléfonos, IPs
+- **Contactos**: redes sociales, mensajería, email
+- **Grafo** de red entre todos los sujetos del sistema
 
-### Linux / macOS (un solo comando)
+### 📓 Cuaderno del Investigador
+- Notas personales que **NO se envían a la IA**
+- Hipotésis, preguntas, teorías, observaciones privadas
+- Separado de las notas de investigación
 
-```bash
-curl -sSL https://raw.githubusercontent.com/tuangel134/nexus/main/install.sh | bash
-```
+### 🔐 Seguridad y Encriptación
+- Todos los datos encriptados en reposo con **AES-256-GCM**
+- Derivación de clave con **PBKDF2** (600,000 iteraciones)
+- Backups **auto-contenidos** con cabecera de versión (compatibilidad futura)
+- **Recovery Package (.nrb)**: respaldo completo portátil
+- Auto-encriptado al cerrar la aplicación
+- Contraseña maestra requerida para acceder
 
-### Windows (PowerShell, un solo comando)
+### 📱 Subida desde el Teléfono
+- Código QR con la IP local
+- Interfaz mobile-friendly optimizada
+- Selección de sujeto y subida directa a Multimedia
 
-```powershell
-iwr -useb https://raw.githubusercontent.com/tuangel134/nexus/main/install.ps1 | iex
-```
-
-### Instalación manual
-
-#### Requisitos
-- Python 3.8+
-- Node.js 18+ (solo para desarrollo)
-- pip
-
-```bash
-git clone https://github.com/tuangel134/nexus.git
-cd nexus
-
-# Instalar dependencias Python
-pip install flask cryptography qrcode[pil]
-
-# Construir frontend
-cd nexus-frontend/app
-npm install
-npm run build
-cd ../..
-
-# Iniciar
-python3 app.py
-```
-
----
-
-## 🚀 Uso
-
-```bash
-python3 app.py
-```
-
-Se abre en `http://localhost:7331`. En la primera ejecución configura una contraseña maestra para encriptar los datos.
-
-### Escanear desde el teléfono
-Una vez iniciado, hacé clic en **📱 TELÉFONO** en la barra superior y escaneá el código QR con tu celular (misma WiFi).
-
----
-
-## 🔧 Compilación
-
-### Ejecutable Windows (.exe)
-
-```bash
-pip install pyinstaller
-pyinstaller nexus.spec
-```
-
-### Paquete Debian (.deb)
-
-```bash
-# Requiere dpkg-deb
-./build_deb.sh
-```
+### 📜 Auditoría Completa
+- Registro de todas las acciones: crear, editar, eliminar
+- Útil para investigación forense del propio caso y coordinación en equipo
 
 ---
 
@@ -119,30 +99,18 @@ pyinstaller nexus.spec
 
 ```
 nexus/
-├── app.py                          # Backend Flask (API REST)
-├── crypto.py                       # Módulo de encriptación AES-256-GCM
-├── nexux.sh                        # Script de inicio
-├── nexus-frontend/app/             # Frontend React + Vite + Tailwind
+├── app.py                          # 🐍 Backend Flask (API REST)
+├── crypto.py                       # 🔐 Encriptación AES-256-GCM + PBKDF2
+├── nexus.sh                        # 🚀 Script de inicio
+├── nexus-frontend/app/             # ⚛️ Frontend React 19 + Vite + Tailwind
 │   └── src/
-│       ├── components/layout/      # TopBar, Sidebar, TabNavigation...
-│       ├── components/sections/    # EventsSection, BoardSection...
-│       └── hooks/                  # useAI, useInitData
-├── script investigacion/           # Motor OSINT (sherlock++)
-│   └── sherlock_ultimate.py        # 500+ plataformas, Maigret, Socialscan...
-├── static/                         # Frontend legacy (HTML plano)
-├── uploads/                        # Archivos multimedia
-├── backups/                        # Backups auto-contenidos
-└── profiles_data/                  # Datos OSINT (encriptados en reposo)
+│       ├── components/layout/      # TopBar, Sidebar, TabNavigation, AIAssistant
+│       └── components/sections/    # EventsSection, BoardSection, OSINTSection...
+├── script investigacion/           # 🕵️ Motor OSINT (sherlock++ 500+ plataformas)
+│   └── sherlock_ultimate.py        # Maigret, Socialscan, Holehe, Ignorant...
+├── screenshots/                    # 📸 Capturas de pantalla
+└── uploads/                        # 📁 Archivos multimedia
 ```
-
----
-
-## 🔒 Seguridad
-
-- **Encriptación en reposo**: AES-256-GCM con derivación de clave PBKDF2 (600,000 iteraciones)
-- **Backups auto-contenidos**: Incluyen salt, verificables con solo la contraseña
-- **Auto-encriptado**: Al cerrar la aplicación, todos los datos se cifran automáticamente
-- **Recovery Package (.nrb)**: Respaldo completo portátil (DB + uploads + OSINT + configuración)
 
 ---
 
@@ -150,34 +118,59 @@ nexus/
 
 | Capa | Tecnología |
 |------|-----------|
-| Backend | Python 3, Flask, SQLite |
-| Frontend | React 19, Vite, TypeScript, Tailwind CSS |
-| OSINT | Sherlock++, Maigret, Socialscan, Holehe, Ignorant, Toutatis |
-| Encriptación | AES-256-GCM, PBKDF2, SHA-256 |
-| UI | shadcn/ui, Framer Motion, Lucide Icons |
+| **Backend** | Python 3 + Flask + SQLite |
+| **Frontend** | React 19 + TypeScript + Vite + Tailwind CSS |
+| **Animaciones** | Framer Motion |
+| **UI Components** | shadcn/ui + Lucide Icons |
+| **OSINT** | Sherlock++, Maigret, Socialscan, Holehe, Ignorant, Toutatis |
+| **Encriptación** | AES-256-GCM + PBKDF2 (cryptography) |
+| **Build** | PyInstaller (.exe) · dpkg-deb (.deb) · GitHub Actions |
 
 ---
 
-## 📄 Licencia
+## ⚡ Inicio Rápido
 
-MIT License — ver [LICENSE](LICENSE) para detalles.
+```bash
+# 1. Instalación (un solo comando)
+curl -sSL https://raw.githubusercontent.com/tuangel134/nexus/main/install.sh | bash
+
+# 2. Iniciar
+cd nexus && python3 app.py
+
+# 3. Abrir navegador en http://localhost:7331
+```
+
+En la primera ejecución, NEXUS te pedirá configurar una **contraseña maestra** para encriptar todos los datos. A partir de ahí, cada vez que inicies la aplicación deberás ingresarla para desencriptar y acceder a tu información.
 
 ---
 
-## ⚠️ Importante
+## 📦 Descargas
 
-Este repositorio contiene **solamente el código fuente**. Los archivos de datos de investigación (`nexus.db`, `uploads/`, `profiles_data/`, `.nexus_*`) están en `.gitignore` y **nunca se suben** a GitHub. La primera vez que ejecutes la aplicación, se crearán automáticamente.
+| Plataforma | Archivo |
+|-----------|---------|
+| 🪟 Windows | `nexus.exe` (descargar de [Releases](https://github.com/tuangel134/nexus/releases)) |
+| 🐧 Linux | `nexus-*.deb` (descargar de [Releases](https://github.com/tuangel134/nexus/releases)) |
+| 🐍 Python | `pip install -r requirements.txt` |
 
 ---
 
-## ☕ Apoya el proyecto
+## 🤝 Contribuciones
+
+¿Encontraste un bug? ¿Tenés una idea para mejorar NEXUS? 
+Abrí un [issue](https://github.com/tuangel134/nexus/issues) o enviá un [pull request](https://github.com/tuangel134/nexus/pulls).
+
+---
+
+## ☕ Apoya el Proyecto
+
+Si NEXUS te es útil, considerá hacer una donación:
 
 **PayPal:** [https://paypal.me/tuangel1346](https://paypal.me/tuangel1346) — tuangel1346@gmail.com
 
-**Crypto:**
+**Criptomonedas (Bitcoin):**
 
 ```
-BTC: bc1q5nrv64jchep3hpqptvwmume8rkw68937zftfpa
+bc1q5nrv64jchep3hpqptvwmume8rkw68937zftfpa
 ```
 
 ---
@@ -185,5 +178,7 @@ BTC: bc1q5nrv64jchep3hpqptvwmume8rkw68937zftfpa
 <div align="center">
   <sub>Hecho con ❤️ para la comunidad de investigación e inteligencia.</sub>
   <br>
-  <sub>¿Te sirve NEXUS? Dejá una ⭐ en GitHub</sub>
+  <sub>⭐ Dejá una estrella en GitHub si te sirve</sub>
+  <br>
+  <sub>© 2026 — MIT License</sub>
 </div>
