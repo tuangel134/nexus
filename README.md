@@ -172,14 +172,12 @@ Este repositorio contiene **solamente el código fuente**. Los archivos de datos
 
 ## ☕ Apoya el proyecto
 
-**PayPal:** <!-- Completa con tu PayPal -->
+**PayPal:** [https://paypal.me/tuangel1346](https://paypal.me/tuangel1346) — tuangel1346@gmail.com
 
 **Crypto:**
 
 ```
-BTC: <!-- Completa con tu wallet BTC -->
-ETH: <!-- Completa con tu wallet ETH -->
-SOL: <!-- Completa con tu wallet SOL -->
+BTC: bc1q5nrv64jchep3hpqptvwmume8rkw68937zftfpa
 ```
 
 ---
