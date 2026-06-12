@@ -5,7 +5,8 @@ uploads/*
 !uploads/.gitkeep
 .nexus_salt
 .nexus_key
-backups/
+backups/*
+!backups/.gitkeep
 profiles_data/
 script investigacion/profiles_data/
 script investigacion/venv/
@@ -37,3 +38,6 @@ build/
 *.spec
 *.exe
 *.deb
+config.json
+README(1).md
+Instalacion sherlock_ultimate.txt
