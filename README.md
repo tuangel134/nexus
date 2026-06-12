@@ -49,13 +49,13 @@ NEXUS es una plataforma integral de investigación diseñada para profesionales 
 ### Linux / macOS (un solo comando)
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/tuusuario/nexus/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/tuangel134/nexus/main/install.sh | bash
 ```
 
 ### Windows (PowerShell, un solo comando)
 
 ```powershell
-iwr -useb https://raw.githubusercontent.com/tuusuario/nexus/main/install.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/tuangel134/nexus/main/install.ps1 | iex
 ```
 
 ### Instalación manual
@@ -66,8 +66,7 @@ iwr -useb https://raw.githubusercontent.com/tuusuario/nexus/main/install.ps1 | i
 - pip
 
 ```bash
-# Clonar el repositorio
-git clone https://github.com/tuusuario/nexus.git
+git clone https://github.com/tuangel134/nexus.git
 cd nexus
 
 # Instalar dependencias Python

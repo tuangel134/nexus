@@ -7,7 +7,7 @@ echo "║         ⬡ NEXUS — Instalador Universal       ║"
 echo "╚══════════════════════════════════════════════╝"
 echo ""
 
-REPO="https://github.com/tuusuario/nexus.git"
+REPO="https://github.com/tuangel134/nexus.git"
 INSTALL_DIR="$HOME/nexus"
 
 # Detectar OS

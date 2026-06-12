@@ -5,7 +5,7 @@ Write-Host "║         ⬡ NEXUS — Instalador Windows        ║" -Foreground
 Write-Host "╚══════════════════════════════════════════════╝" -ForegroundColor Cyan
 Write-Host ""
 
-$REPO = "https://github.com/tuusuario/nexus.git"
+$REPO = "https://github.com/tuangel134/nexus.git"
 $INSTALL_DIR = "$env:USERPROFILE\nexus"
 
 # Verificar Python
